@@ -1,0 +1,623 @@
+@charset "utf-8";
+
+
+/* ==================
+共通
+================== */
+body{
+	font-family: 'Lato', sans-serif;
+	color: #444;
+}
+
+.container{
+	margin: 0 170px;
+}
+
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+
+li{
+	list-style: none;
+}
+
+.section-title{
+	font-size: 40px;
+	text-align: center;
+	margin: 0px auto 90px;
+	letter-spacing: 0.16em;
+}
+
+section{
+	padding: 120px 0;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+.smart-phone{
+	display: none;
+}
+
+/* ==================
+header
+================== */
+h1{
+	font-family: 'Lato' Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+	letter-spacing: 0.2em;
+}
+
+header{
+	background-color: #fff;
+	width: 100%;
+	height: 100px;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 36px 0;
+}
+
+.header-title{
+	font-size: 34px;
+	display: flex;
+}
+
+
+ul{
+	display: flex;
+	justify-content: space-around;
+}
+
+.header-right{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	margin:7px 80px 0px 0px;
+  }
+
+
+
+/* -----------------
+header右のリストマウスホバー時に下線が現れる
+----------------- */
+
+.header-right-item {
+	display: flex;
+	margin-right: 27px;
+	font-size: 14px;
+  text-decoration: none;
+	color: #444;
+	position: relative;
+  display: inline-block;
+}
+
+.header-right-item::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #444;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .4s;
+}
+
+.header-right-item:hover::after {
+	transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/* ==================
+top
+================== */
+.top{
+	background-image: url(../img/top-visual.png);
+	background-size: cover;
+	object-fit: cover;
+	height: 350px;
+}
+
+.top{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.top-message{
+	color: #444;
+	text-shadow: #fff 1px 2px 3px;
+	font-size: 17px;
+}
+
+/* -----------------
+フワッと表示させる
+----------------- */
+ 
+.efect-fade {
+	animation-name: fade-in;
+	animation-duration: 2s;
+	/* animation-iteration-count: infinite; */
+}
+
+@keyframes fade-in {
+from {
+	opacity: 0;
+	transform: translateY(20px);
+}
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+}
+
+
+
+/* ==================
+about
+================== */
+.about-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.about-image{
+	max-width: 250px;
+}
+
+.about-image>img{
+	width: 100%;
+	border-radius: 3px;
+}
+
+.about-text{
+	margin-left: 40px;
+}
+
+.about-name{
+	font-size: 20px;
+	margin-bottom: 40px;
+	letter-spacing: 0.1em;
+}
+
+.about-message{
+	line-height: 2em;
+	margin-bottom: 40px;
+}
+
+.sns{
+	display: flex;
+}
+
+.twitter{
+	margin-right: 20px;
+}
+
+ul{
+	width: 130px;
+}
+
+li{
+	width: 50%;
+	height: auto;
+	opacity: 0.7;
+}
+
+
+
+/* ==================
+service
+================== */
+.service{
+	background-color: rgb(243, 243, 243);
+	padding: 120px 0;
+}
+
+.service-title{
+	font-size: 24px;
+	font-family:Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.service-wrapper{
+	display: flex;
+	justify-content: space-between;
+  text-align: center;
+}
+
+.fas{
+	display: block;
+	font-size: 60px;
+	margin-bottom: 40px;
+	color: rgb(128, 168, 206);
+	opacity: 0.8;
+}
+
+.far{
+	display: block;
+	font-size: 60px;
+	margin-bottom: 40px;
+	color: rgb(128, 168, 206);
+	opacity: 0.8;
+}
+
+.service-section{
+	max-width: 30%;
+}
+
+.service-text{
+	line-height: 2em;
+	margin-bottom: 70px;	
+	font-size: 15px;
+	text-align: left;
+}
+
+
+.service-box{
+	background-color: #fff;
+	max-width: 80%;
+	margin: 0 auto;
+	border-radius: 3px;
+	padding: 30px 30px;
+}
+
+.service-price{
+	margin-top: 0px;
+	font-size: 18px;
+}
+
+.service-message{
+	margin-top: 20px;
+}
+
+
+/* ==================
+works
+================== */
+.works-text{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.works-item{
+	max-width: 320px;
+}
+
+img{
+	width: 100%;
+}
+
+
+/* ==================
+contact
+================== */
+.contact{
+	background-color: rgb(243, 243, 243);
+}
+
+.contact-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.contact-stage{
+	margin: 0px 80px 80px;
+}
+
+.fa-envelope{
+	text-align: center;
+}
+
+.contact-subtitle{
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.contact-adress{
+	text-align: center;
+}
+
+.contact-text{
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+
+
+.contact-button {
+  display: block;
+	margin: 0 auto;
+	padding: 20px 0px;
+  text-decoration: none;
+  background: rgb(128, 168, 206);
+	border: none;
+  border-bottom: solid 4px #627295;
+  border-radius: 100px;
+}
+
+.contact-button:hover{
+	opacity: 0.9;
+}
+
+.contact-button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+button>a{
+	color: #fff;
+	padding: 25px 30px;
+}
+
+
+/* ==================
+footer
+================== */
+footer{
+	height: 50px;
+}
+
+.copyright{
+	text-align: right;
+	font-size: 12px;
+	margin: 39px auto;
+}
+
+
+
+/* ====================
+i-pad用の表示
+==================== */
+
+@media only screen and (max-width: 1190px) and (min-width: 769px){
+
+	/* ====================
+共通
+==================== */
+	.smart-phone{
+		display: none;
+	}
+
+	.section-title{
+		font-size: 36px;
+	}
+
+	/* ====================
+header
+==================== */
+
+	.header-title{
+		font-size: 24px;
+		display: flex;
+		justify-content: center;
+		padding-top: 20px;
+	}
+
+	.header-right-item{
+		font-size: 14px;
+		display: flex;
+		justify-content: center;
+		margin: 0px 25px;
+	}
+
+	.header{
+		display: block;
+		padding: 7px 0 0px;
+	}
+
+	.header-right{
+		margin: 15px 20px;
+		display: flex;
+		justify-content: center;
+	}
+
+		/* ====================
+top
+==================== */
+.top-message{
+	line-height: 2em;
+}
+
+		/* ====================
+about
+==================== */
+
+		/* ====================
+service
+==================== */
+.service-title{
+	font-size: 18.5px;
+	font-weight: 600;
+}
+
+.service-message{
+	line-height: 2em;
+}
+
+
+/* ====================
+contact
+==================== */
+.contact-text{
+  line-height: 2em;
+}
+
+/* ====================
+footer
+==================== */
+.copyright{
+	text-align: center;
+}
+
+}
+
+
+
+
+
+
+
+/* ====================
+スマホ用の表示
+==================== */
+@media only screen and (max-width: 768px){
+
+/* ====================
+共通
+==================== */
+.container{
+	margin: 0 20px;
+}
+
+.smart-phone{
+	display: inline-block;
+}
+
+.section-title{
+	margin-bottom: 60px;
+	font-size: 34px;
+}
+
+.pc{
+	display: none;
+}
+		/* ====================
+header
+==================== */
+
+.header-title{
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.header-right-item{
+	margin:10px 20px;
+}
+
+.header{
+	display: block;
+	text-align: center;
+}
+
+.header-right{
+	margin: 10px 25px 0px 0px;
+	display: flex;
+	justify-content: center;
+}
+
+		/* ====================
+top
+==================== */
+
+.top{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 380px;
+}
+
+.top-message{
+	writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	line-height: 3em;
+	text-align: center;
+	margin-right: 110px;
+}
+
+
+
+		/* ====================
+about
+==================== */
+.about-name{
+	font-size: 18px;
+	line-height: 2em;
+}
+
+.about-text{
+	margin-left: 15px;
+}
+
+ul{
+	width: 100px;
+}
+
+li{
+	width: 35%;
+}
+
+		/* ====================
+service
+==================== */
+.service-wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.service-section{
+	max-width: 100%;
+}
+
+.service-title{
+	margin-bottom: 30px;
+}
+
+.service-text{
+	margin: 30px auto 90px;
+}
+
+.service-price {
+	text-align: left;
+	line-height: 2em;
+}
+
+.service-message{
+	text-align: left;
+	line-height: 1.8em;
+}
+
+		/* ====================
+works
+==================== */
+.works-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+		/* ====================
+contact
+==================== */
+.contact-text{
+	line-height: 2em;
+}
+
+.contact-button {
+	padding: 20px 20px;
+}
+
+
+		/* ====================
+footer
+==================== */
+.copyright{
+	text-align: center;
+}
+
+
+}
